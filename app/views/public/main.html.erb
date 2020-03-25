@@ -1,0 +1,60 @@
+<section class="text-center mt-20">
+  <h1 class="text-2xl font-semibold leading-relaxed">Your personnel brand,<br>Is what differentiate you from the Competition.</h1>
+  <h2 class="text-base leading-relaxed">Create a page to promote who you are<br>and what you do in one link.</h2>
+  <div class="flex flex-col mt-12 sm:inline-block">
+    <%= link_to "Get started", new_account_registration_url, :class=>"px-6 py-2 bg-whizzo-300 text-white rounded" %>
+    <a href="#" class="mt-4 sm:mt-0 sm:ml-4 px-6 py-2 bg-whizzo-100 text-whizzo-400 rounded">Learn more</a>
+  </div>
+</section>
+
+<!-- Desktop offre -->
+<section class="hidden sm:inline-block mt-40">
+<div class="text-center">
+  <div class="flex justify-around content-center">
+    <div>
+      <img class="w-2/3 mx-auto my-0" src="<%= asset_path('domain.png') %>" alt="Whizzo.co custom domain">
+    </div>
+    <div>
+      <img class="w-2/3 mx-auto my-0" src="<%= asset_path('cta.png') %>" alt="Whizzo.co add cta button">
+    </div>
+    <div>
+      <img class="w-2/3 mx-auto my-0" src="<%= asset_path('link.png') %>" alt="Whizzo.co share one link">
+    </div>
+  </div>
+  <div class="mt-10 flex justify-between items-center ">
+    <div>
+      <h1 class="font-semibold text-xl text-whizzo-400">Professional domains</h1>
+      <p class="w-2/3 mx-auto my-0 text-whizzo-300 leading-relaxed mt-4">Add a secure, custom domain to your page. Or, map one you already own.</p>
+    </div>
+    <div>
+      <h1 class="font-semibold text-xl text-whizzo-400">CTA Button</h1>
+      <p class="w-2/3 mx-auto my-0 text-whizzo-300 leading-relaxed mt-4">Make it easy for your audience to take action on what is most important to you.</p>
+    </div>
+    <div>
+      <h1 class="font-semibold text-xl text-whizzo-400">One link</h1>
+      <p class="w-2/3 mx-auto my-0 text-whizzo-300 leading-relaxed mt-4">Use your link everywhere, online and offline, to promote yourself.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Mobile offre -->
+<section class="sm:hidden px-12 py-4 mt-24">
+  <div class="text-center">
+    <img class="w-2/3 mx-auto my-0" src="<%= asset_path('domain.png') %>" alt="Whizzo.co custom domain">
+    <h1 class="mt-10 font-semibold text-xl text-whizzo-400">Professional domains</h1>
+    <p class="w-2/3 mx-auto my-0 text-whizzo-300 leading-relaxed mt-4">Add a secure, custom domain to your page. Or, map one you already own.</p>
+  </div>
+
+  <div class="text-center">
+    <img class="mt-10 w-2/3 mx-auto my-0" src="<%= asset_path('cta.png') %>" alt="Whizzo.co add cta button">
+    <h1 class="mt-10 font-semibold text-xl text-whizzo-400">CTA Button</h1>
+    <p class="w-2/3 mx-auto my-0 text-whizzo-300 leading-relaxed mt-4">Make it easy for your audience to take action on what is most important to you.</p>
+  </div>
+
+  <div class="text-center">
+    <img class="mt-10 w-2/3 mx-auto my-0" src="<%= asset_path('link.png') %>" alt="Whizzo.co share one link">
+    <h1 class="mt-10 font-semibold text-xl text-whizzo-400">One link</h1>
+    <p class="w-2/3 mx-auto my-0 text-whizzo-300 leading-relaxed mt-4">Use your link everywhere, online and offline, to promote yourself.</p>
+  </div>
+</section>

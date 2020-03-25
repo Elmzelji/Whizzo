@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whizzo - Profile onboarding</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6527645c57.js" crossorigin="anonymous"></script>
+  </head>
+
+
+
+  <body class="font-sans bg-white antialiased text-sm">
+
+
+
+      <% if notice %>
+        <div class="bg-whizzo-500 border-t-4 border-whizzo-400 text-teal-darkest px-4 py-3" role="alert">
+          <div>
+            <div>
+              <p class="text-sm text-white font-semibold"><%= notice %></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <% if alert %>
+        <div class="bg-red-400 border-t-4 border-red-600 text-teal-darkest px-4 py-3" role="alert">
+          <div>
+              <p class="text-sm text-white font-semibold"><%= alert %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <section class="px-12 md:px-32">
+
+        <%= yield %>
+
+      </section>
+
+      
+
+  </body>
+</html>

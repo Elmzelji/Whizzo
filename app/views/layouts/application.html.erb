@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whizzo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6527645c57.js" crossorigin="anonymous"></script>
+  </head>
+
+
+
+  <body class="font-sans bg-white antialiased text-sm">
+
+
+
+      <% if notice %>
+        <div class="bg-whizzo-500 border-t-4 border-whizzo-400 text-teal-darkest px-4 py-3" role="alert">
+          <div>
+            <div>
+              <p class="text-sm text-white font-semibold"><%= notice %></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <% if alert %>
+        <div class="bg-red-400 border-t-4 border-red-600 text-teal-darkest px-4 py-3" role="alert">
+          <div>
+              <p class="text-sm text-white font-semibold"><%= alert %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+
+    <%= render "layouts/nav/public" %>
+
+    <% if !@user.profile %>
+      <div class="bg-whizzo-300 border-t-4 border-whizze-400 text-teal-darkest px-4 py-3" role="alert">
+        <div>
+            <p class="sm:px-20 text-sm text-white font-semibold"><span class="bg-white text-whizzo-400 py-2 px-3 mr-2 rounded-full">20%</span> Complete your <%= link_to 'profile now', boarding_informations_path, class: "no-underline border-b-2 hover:border-transparent" %></p>
+          </div>
+      </div>
+    <% end %>
+
+
+    <main class="px-12 py-4 sm:px-24 sm:py-6">
+      <%= yield %>
+    </main>
+
+
+    <footer class="mt-40 px-12 py-4 sm:px-24 sm:py-6 bg-whizzo-100">
+      <div class="py-10 flex flex-col sm:flex-row sm:justify-between sm:items-center">
+        <div>
+          <a href="#">
+            <img class="w-24" src="<%= asset_path('logo.png') %>" alt="Whizzo.co">
+          </a>
+          <p class="w-full sm:w-1/3 mt-4 text-whizzo-400">
+            a platform where freelancers, entrepreneurs, and side hustlers can expand their audience and attract new clients.
+          </p>
+        </div>
+        <div>
+          <p class="mt-12 sm:mt-0 text-whizzo-400 font-normal">&copy; 2019 <a href="#">whizzo.co™</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

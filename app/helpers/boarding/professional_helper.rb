@@ -1,0 +1,2 @@
+module Boarding::ProfessionalHelper
+end

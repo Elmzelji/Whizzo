@@ -1,0 +1,2 @@
+module Boarding::DomainHelper
+end

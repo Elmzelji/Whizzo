@@ -1,0 +1,2 @@
+module Boarding::InformationsHelper
+end
